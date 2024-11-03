@@ -10,5 +10,8 @@ export default {
     },
     extend: {},
   },
+  daisyui: {
+    themes: ["light", "business"],
+  },
   plugins: [require('daisyui'),],
 } 
