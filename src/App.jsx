@@ -1,5 +1,8 @@
 import { useState } from "react"
 import Header from "./Components/Header/Header"
+import Footer from "./Components/Footer/Footer"
+import BodySection from "./Components/Main/BodySection"
+
 
 function App() {
   const [theme, setTheme] = useState(true)
@@ -15,6 +18,8 @@ const handleMenu = () => {
   return (
     <>
       <Header handleTheme={handleTheme} handleMenu={handleMenu} menu={menu}  theme={theme}/>
+      <BodySection/>
+      <Footer theme={theme} />
     </>
   )
 }
