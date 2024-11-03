@@ -1,0 +1,61 @@
+Here's a mind map to help you organize the requirements for creating the GadgetHeaven e-commerce platform project. You can approach each section systematically:
+
+ 1. Navigation & Layout
+   - Navbar
+     - Menu Items: Logo, Brand Name, Dashboard, Stats
+     - Indicate the active route
+     - Persistent across all pages (except Error/404)
+   - Footer
+     - Add meaningful info
+     - Consistently visible on all pages
+
+ 2. Pages & Sections
+   - Home Page
+     - Banner Section: Include a button leading to the Dashboard
+     - Categories Sidebar: Display gadget categories (computers, phones, etc.)
+     - Gadget Cards: Show 6-9 gadgets with image, name, price, and a "Details" button
+       - Filter gadgets by selected category
+       - JSON Data Requirements: `product_id`, `product_title`, `category`, `price`, `description`, `availability`, `rating`
+   - Details Page
+     - Product image, name, price, and additional details
+     - Buttons:
+       - Add to Cart: Add to cart with a badge on the navbar
+       - Wishlist: Add once, disable button after
+     - Toast messages on adding to cart/wishlist
+   - Dashboard Page
+     - Tabs: Cart and Wishlist
+     - Cart Tab: Sort by Price option, show total price
+     - Wishlist Tab: View wishlist items, add items to cart
+   - New Route: Add one extra page with relevant content
+   - 404 Page: Displayed for unavailable routes
+
+ 3. Functionalities
+   - Shopping Cart
+     - Add to Cart: Badge update and toast message
+     - Price Sorting: Sort cart items by descending price
+     - Limit total price to $1000; prevent adding if exceeded
+   - Wishlist
+     - One-time add per item, disable after
+     - Option to move items to Cart
+   - Persistent State
+     - Use Context API and/or LocalStorage
+
+ 4. Advanced Features
+   - Styling Variations
+     - Use different background colors for Home vs. other pages (`useLocation` hook)
+   - Purchase Modal
+     - On purchase, show success modal, reset cart
+     - Disable purchase if cart is empty
+   - Dynamic Page Elements
+     - Favicon
+     - Dynamic title for each page using `react-helmet-async`
+   - Statistics Page: 
+     - Chart (Prices on Y-axis, Product name on X-axis)
+     - Composed chart with area, bar, and scatter data
+
+ 5. Documentation & Resources
+   - README.md
+     - Live website link
+     - Requirement document link
+     - React concepts and data management techniques
+     - Top 5 features of the site
