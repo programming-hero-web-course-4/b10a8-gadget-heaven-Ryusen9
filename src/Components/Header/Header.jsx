@@ -4,18 +4,18 @@ import Menu from "./Menu";
 
 const Header = ({ handleTheme, theme, handleMenu, menu }) => {
   return (
-    <nav className="fixed top-0 right-0 w-full font-sora">
+    <nav className="fixed z-10 top-0 right-0 w-full font-sora">
       <div
         id="container"
-        className="flex items-center justify-between relative py-5 lg:py-7 px-6 md:px-14 lg:px-16"
+        className="flex items-center justify-between relative py-8 lg:py-7 px-9 md:px-14 lg:px-16"
       >
         <div id="logo">
-          <p className="text-xl md:text-2xl font-bold">
+          <p className={`text-xl md:text-2xl font-bold ${theme === true && 'text-zinc-800'}`}>
             Gadget<span className="text-purple-400">Heaven</span>
           </p>
         </div>
         <div id="menu">
-            <Menu menu={menu}/>
+            <Menu menu={menu} theme={theme}/>
         </div>
         <div
           id="btn-container"
