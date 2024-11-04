@@ -12,7 +12,7 @@ const Hero = () => {
                 <p className="text-zinc-100 w-[300px]">Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
                 <button className="btn rounded-lg">Shop Now</button>
             </div>
-            <div className="border-2 absolute top-[520px] border-zinc-100 mx-auto w-[70%] md:w-[700px] rounded-lg p-5 flex items-center justify-center">
+            <div className="border-2 backdrop-blur-md absolute top-[520px] border-zinc-100 mx-auto w-[70%] md:w-[700px] rounded-lg p-5 flex items-center justify-center">
                 <img src={banner} alt="" className='w-full rounded-lg' />
             </div>
         </div>
