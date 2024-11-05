@@ -1,0 +1,243 @@
+[
+    {
+      "product_id": "001",
+      "product_title": "iPhone 14 Pro",
+      "product_image": "https://i.ibb.co.com/hB7wrDs/iphone-14.webp",
+      "category": "Phones",
+      "price": 999.99,
+      "description": "The latest iPhone with an advanced camera system and powerful A16 chip.",
+      "Specification": [
+        "6.1-inch Super Retina XDR display",
+        "A16 Bionic chip",
+        "48MP Main camera",
+        "5G support"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "002",
+      "product_title": "Samsung Galaxy S23 Ultra",
+      "product_image": "https://i.ibb.co.com/Gv7gZ8m/Galaxy-S22-Ultra-35.webp",
+      "category": "Phones",
+      "price": 1199.99,
+      "description": "A flagship phone with an ultra-high-resolution camera and S Pen support.",
+      "Specification": [
+        "6.8-inch QHD+ AMOLED display",
+        "108MP Main camera",
+        "5,000mAh battery",
+        "S Pen included"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "003",
+      "product_title": "MacBook Pro 14",
+      "product_image": "https://i.ibb.co.com/xFRzy0K/3187i1n-SVTL.jpg",
+      "category": "Computers",
+      "price": 1999.99,
+      "description": "High-performance laptop with M2 Pro chip, perfect for creators and developers.",
+      "Specification": [
+        "14.2-inch Liquid Retina XDR display",
+        "Apple M2 Pro chip",
+        "16GB RAM",
+        "512GB SSD"
+      ],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": "004",
+      "product_title": "Dell XPS 13",
+      "product_image": "https://i.ibb.co.com/xFdQxZc/dell-xps-13-ces-2015-001.webp",
+      "category": "Computers",
+      "price": 1299.99,
+      "description": "Compact and powerful laptop with InfinityEdge display and long battery life.",
+      "Specification": [
+        "13.4-inch FHD+ display",
+        "Intel Core i7-1250U",
+        "16GB RAM",
+        "512GB SSD"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "005",
+      "product_title": "Apple Watch Series 8",
+      "product_image": "https://i.ibb.co.com/0rnVBgG/modal-health-sleep-b5sbshxkaj36-xlarge.jpg",
+      "category": "Smart Watches",
+      "price": 399.99,
+      "description": "Advanced health features and enhanced fitness tracking capabilities.",
+      "Specification": [
+        "1.9-inch OLED display",
+        "Blood Oxygen & ECG apps",
+        "Water-resistant up to 50m",
+        "GPS + Cellular"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "006",
+      "product_title": "Samsung Galaxy Watch 5",
+      "product_image": "https://i.ibb.co.com/gddHRJz/31n-Cp3-Ksg-YL.jpg",
+      "category": "Smart Watches",
+      "price": 279.99,
+      "description": "Durable smartwatch with advanced fitness and health tracking features.",
+      "Specification": [
+        "1.4-inch AMOLED display",
+        "Sleep and stress tracking",
+        "Water-resistant up to 50m",
+        "GPS"
+      ],
+      "availability": true,
+      "rating": 4.4
+    },
+    {
+      "product_id": "007",
+      "product_title": "Anker PowerCore 26800mAh",
+      "product_image": "https://i.ibb.co.com/zRJj0Zf/AN-A1277-H11-BK-1024x1024.webp",
+      "category": "Chargers",
+      "price": 69.99,
+      "description": "High-capacity portable charger with fast charging and multi-device support.",
+      "Specification": [
+        "26800mAh capacity",
+        "Dual USB-A output",
+        "Fast charging support",
+        "LED indicator"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": "008",
+      "product_title": "RAVPower 20000mAh Power Bank",
+      "product_image": "https://i.ibb.co.com/HpGN59W/C-b3e5099b-b1b2-42ea-8de5-19753691fd03.webp",
+      "category": "Chargers",
+      "price": 49.99,
+      "description": "Portable power bank with dual USB and fast charging technology.",
+      "Specification": [
+        "20000mAh capacity",
+        "USB-C and USB-A ports",
+        "Quick Charge 3.0 support",
+        "LED indicator"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "009",
+      "product_title": "Sony WH-1000XM5",
+      "product_image": "https://i.ibb.co.com/xHhjWn6/71a5-XAAbzb-L.jpg",
+      "category": "Accessories",
+      "price": 399.99,
+      "description": "Noise-cancelling wireless headphones with excellent sound quality.",
+      "Specification": [
+        "Active noise cancellation",
+        "Up to 30 hours battery life",
+        "Touch control",
+        "High-resolution audio support"
+      ],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": "010",
+      "product_title": "Bose QuietComfort Earbuds II",
+      "product_image": "https://i.ibb.co.com/TWfRPzf/Bose-Quietcomfort-Earbuds.jpg",
+      "category": "Accessories",
+      "price": 279.99,
+      "description": "Premium wireless earbuds with customizable noise cancellation.",
+      "Specification": [
+        "Active noise cancellation",
+        "Up to 6 hours battery per charge",
+        "Bluetooth 5.1",
+        "IPX4 water resistance"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "011",
+      "product_title": "Google Pixel 7",
+      "product_image": "https://i.ibb.co.com/P4fNxgB/gsmarena-000.jpg",
+      "category": "Phones",
+      "price": 699.99,
+      "description": "Google's latest smartphone with excellent camera and Google Tensor chip.",
+      "Specification": [
+        "6.3-inch OLED display",
+        "Google Tensor G2 chip",
+        "50MP dual rear camera",
+        "5G support"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "012",
+      "product_title": "Lenovo ThinkPad X1 Carbon",
+      "product_image": "https://i.ibb.co.com/VxQb82R/02-PX9-YDzfu4p-BDk-KQBx9jdk-19.webp",
+      "category": "Computers",
+      "price": 1699.99,
+      "description": "Professional laptop with powerful performance and rugged design.",
+      "Specification": [
+        "14-inch FHD display",
+        "Intel Core i7",
+        "16GB RAM",
+        "1TB SSD"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "013",
+      "product_title": "ASUS ROG Zephyrus G14",
+      "product_image": "https://i.ibb.co.com/T8NmpT5/asus-rog-zephyrus-g14-2024-5419.webp",
+      "category": "Computers",
+      "price": 1499.99,
+      "description": "Compact gaming laptop with powerful GPU and high refresh rate display.",
+      "Specification": [
+        "14-inch QHD display, 120Hz",
+        "AMD Ryzen 9",
+        "16GB RAM",
+        "1TB SSD"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "014",
+      "product_title": "Fitbit Charge 5",
+      "product_image": "https://i.ibb.co.com/q1wL4V5/41-RLn0a8gx-L.jpg",
+      "category": "Smart Watches",
+      "price": 179.99,
+      "description": "Advanced fitness tracker with heart rate monitoring and stress tracking.",
+      "Specification": [
+        "1.04-inch AMOLED display",
+        "GPS tracking",
+        "Water-resistant up to 50m",
+        "Health tracking features"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": "015",
+      "product_title": "HyperX Cloud II Wireless",
+      "product_image": "https://i.ibb.co.com/1fSFhMT/3181-Ao-I4-RLL.jpg",
+      "category": "Accessories",
+      "price": 149.99,
+      "description": "Comfortable wireless gaming headset with virtual 7.1 surround sound.",
+      "Specification": [
+        "50mm drivers",
+        "Up to 30 hours battery",
+        "Noise-cancelling microphone",
+        "Wireless connection"
+      ],
+      "availability": true,
+      "rating": 4.6
+    }
+  ]
+  
