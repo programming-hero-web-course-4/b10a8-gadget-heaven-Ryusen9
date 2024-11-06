@@ -1,7 +1,14 @@
+import { useRoutes } from "react-router-dom"
+import AllPosts from "../../Allposts.jsx/AllPosts";
+
 const Body = () => {
-  return (
-    <div>Body</div>
-  )
+    const element = useRoutes([
+        {
+            path:  "/",
+            element: <AllPosts/>
+        }
+    ])
+  return element;
 }
 
 export default Body

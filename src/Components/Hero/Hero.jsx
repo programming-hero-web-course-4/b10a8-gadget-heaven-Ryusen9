@@ -1,7 +1,7 @@
 import banner from './banner.jpg'
 const Hero = () => {
   return (
-    <div className=" h-[70vh] mb-[500px] w-full p-2">
+    <div className=" h-[70vh] mb-[30%] md:mb-[400px] w-full p-2">
       <div
         id="container"
         className="border-2 w-full rounded-xl border-purple-400 h-full p-2"
