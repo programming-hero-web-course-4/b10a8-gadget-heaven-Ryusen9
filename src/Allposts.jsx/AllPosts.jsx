@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { ProductContext } from "../ProductContext";
 
 const AllPosts = () => {
@@ -51,10 +51,12 @@ const AllPosts = () => {
                       <span className="font-medium">{product.price}</span>$
                     </p>
                     <div className="flex items-center justify-center">
-                      <button className="btn bg-transparent border-2 border-purple-300 text-purple-400 hover:bg-purple-400 rounded-2xl hover:text-zinc-100 duration-200 mt-4">
-                        {" "}
-                        View Details{" "}
-                      </button>
+                      <Link to={"Details"}>
+                        <button className="btn bg-transparent border-2 border-purple-300 text-purple-400 hover:bg-purple-400 rounded-2xl hover:text-zinc-100 duration-200 mt-4">
+                          {" "}
+                          View Details{" "}
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -63,7 +65,6 @@ const AllPosts = () => {
           </div>
         </div>
       </div>
-      <Outlet />
     </>
   );
 };
