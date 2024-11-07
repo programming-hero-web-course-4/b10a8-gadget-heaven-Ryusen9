@@ -1,8 +1,77 @@
-
-function ProductInfo() {
+import PropTypes from "prop-types";
+import { IoMdHeartEmpty } from "react-icons/io";
+import { MdOutlineShoppingCart } from "react-icons/md";
+import { Link } from "react-router-dom";
+function ProductInfo({ product }) {
+  console.log(product);
   return (
-    <div>ProductInfo</div>
-  )
+    <>
+      <div className="border-2 w-[90%] mx-auto mb-5 grid grid-cols-1 md:grid-cols-2 p-4 rounded-xl font-sora gap-4">
+        <div>
+          <img src={product.product_image} alt="" className="rounded-lg" />
+        </div>
+        <div className="flex flex-col gap-4">
+          <p className="text-xl font-bold">{product.product_title}</p>
+          <p className="text-lg">
+            Price: <span>{product.price}$</span>
+          </p>
+          {product.availability === true ? (
+            <div className="border w-[25%] text-center p-2 rounded-3xl border-green-500 bg-green-300/35 text-zinc-100">
+              In Stock
+            </div>
+          ) : (
+            <div className="border w-[35%] text-center p-2 rounded-3xl border-red-500 bg-red-300 text-zinc-100">
+              Out of Stock
+            </div>
+          )}
+          <p>{product.description}</p>
+          <div>
+            <p className="font-medium">Specifications:</p>
+            <ul>
+              {Array.isArray(product.Specification) &&
+              product.Specification.length > 0 ? (
+                product.Specification.map((specification, index) => (
+                  <li key={index} className="list-inside list-disc">
+                    {specification}
+                  </li>
+                ))
+              ) : (
+                <li>No specifications available.</li>
+              )}
+            </ul>
+          </div>
+          <div>
+            <p>Rating: </p>
+            <div className="flex items-center gap-7">
+            <div className="rating">
+              <input type="radio" name="rating-1" className="mask mask-star" />
+              <input
+                type="radio"
+                name="rating-1"
+                className="mask mask-star"
+                defaultChecked
+              />
+              <input type="radio" name="rating-1" className="mask mask-star" />
+              <input type="radio" name="rating-1" className="mask mask-star" />
+              <input type="radio" name="rating-1" className="mask mask-star" />
+            </div>
+            <div className="flex items-center justify-center bg-yellow-300 px-2 text-zinc-800 py-1 rounded-xl">{product.rating}</div>
+            </div>
+          </div>
+          <div className="flex items-center justify-center gap-7 my-4">
+            <Link>
+            <button className="btn">Add to Cart <MdOutlineShoppingCart /> </button>
+            </Link>
+            <Link>
+            <button className="btn btn-circle text-xl"> <IoMdHeartEmpty/> </button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
-
-export default ProductInfo
+ProductInfo.propTypes = {
+  product: PropTypes.object,
+};
+export default ProductInfo;

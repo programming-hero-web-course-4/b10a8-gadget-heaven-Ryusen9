@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import AllPosts from "../Allposts.jsx/AllPosts"
 import { ProductContext } from "../ProductContext"
 import axios from "axios";
+import PropTypes from 'prop-types'
 
-function Home() {
+function Home( {handleProductInfo} ) {
     const [products, setProducts] = useState([]);
     useEffect(() => {
       const fetchApi = async () => {
@@ -12,14 +13,15 @@ function Home() {
       };
       fetchApi();
     }, []);
-    console.log(products)
   return (
     <>
     <ProductContext.Provider value={products}>
-        <AllPosts />
+        <AllPosts handleProductInfo={handleProductInfo} />
     </ProductContext.Provider>
     </>
   )
 }
-
+Home.propTypes = {
+  handleProductInfo: PropTypes.func
+}
 export default Home

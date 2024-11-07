@@ -1,8 +1,10 @@
 import { useContext } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ProductContext } from "../ProductContext";
+import PropTypes from 'prop-types';
 
-const AllPosts = () => {
+
+const AllPosts = ({ handleProductInfo }) => {
   const categories = [
     "Phones",
     "Computers",
@@ -51,8 +53,8 @@ const AllPosts = () => {
                       <span className="font-medium">{product.price}</span>$
                     </p>
                     <div className="flex items-center justify-center">
-                      <Link to={"Details"}>
-                        <button className="btn bg-transparent border-2 border-purple-300 text-purple-400 hover:bg-purple-400 rounded-2xl hover:text-zinc-100 duration-200 mt-4">
+                      <Link to={`Details/${product.product_id}`}>
+                        <button onClick={() => handleProductInfo(product)} className="btn bg-transparent border-2 border-purple-300 text-purple-400 hover:bg-purple-400 rounded-2xl hover:text-zinc-100 duration-200 mt-4">
                           {" "}
                           View Details{" "}
                         </button>
@@ -68,5 +70,9 @@ const AllPosts = () => {
     </>
   );
 };
+
+AllPosts.propTypes = {
+  handleProductInfo: PropTypes.func
+}
 
 export default AllPosts;

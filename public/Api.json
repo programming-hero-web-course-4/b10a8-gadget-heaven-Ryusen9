@@ -12,7 +12,7 @@
         "48MP Main camera",
         "5G support"
       ],
-      "availability": true,
+      "availability": false,
       "rating": 4.8
     },
     {
@@ -60,7 +60,7 @@
         "16GB RAM",
         "512GB SSD"
       ],
-      "availability": true,
+      "availability": false,
       "rating": 4.6
     },
     {
@@ -124,7 +124,7 @@
         "Quick Charge 3.0 support",
         "LED indicator"
       ],
-      "availability": true,
+      "availability": false,
       "rating": 4.6
     },
     {
@@ -156,7 +156,7 @@
         "Bluetooth 5.1",
         "IPX4 water resistance"
       ],
-      "availability": true,
+      "availability": false,
       "rating": 4.8
     },
     {
@@ -188,7 +188,7 @@
         "16GB RAM",
         "1TB SSD"
       ],
-      "availability": true,
+      "availability": false,
       "rating": 4.8
     },
     {
@@ -236,7 +236,7 @@
         "Noise-cancelling microphone",
         "Wireless connection"
       ],
-      "availability": true,
+      "availability": false,
       "rating": 4.6
     }
   ]
