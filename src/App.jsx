@@ -5,6 +5,7 @@ import Dashboard from "./Dashboard/Dashboard";
 import Statistics from "./Statistics/Statistics";
 import ProductInfo from "./Components/Product info/ProductInfo";
 import { useState } from "react";
+import Hero from './Components/Hero/Hero'
 
 function App() {
   const [product, setProduct] = useState([])
@@ -18,7 +19,12 @@ function App() {
       children: [
         {
           path: "/",
-          element: <Home handleProductInfo={handleProductInfo}/>
+          element: (
+            <>
+            <Hero/>
+            <Home handleProductInfo={handleProductInfo}/>
+            </>
+          )
         },
         {
           path: "/Dashboard",

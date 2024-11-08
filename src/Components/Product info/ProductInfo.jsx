@@ -6,9 +6,14 @@ function ProductInfo({ product }) {
   console.log(product);
   return (
     <>
-      <div className="border-2 w-[90%] mx-auto mb-5 grid grid-cols-1 md:grid-cols-2 p-4 rounded-xl font-sora gap-4">
+      <div className="relative h-screen font-sora mb-32">
+        <div className="bg-gradient-to-t flex flex-col text-center gap-3 pt-[90px] from-purple-500 to-purple-400 h-[40vh]">
+          <p className="text-2xl md:text-4xl text-center font-bold">Product Details</p>
+          <p className="px-6">Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
+        </div>
+      <div className="absolute top-[70%] md:top-[60%] backdrop-blur-md left-1/2 translate-x-[-50%] translate-y-[-50%] border-2 w-[90%] mx-auto mb-5 grid grid-cols-1 md:grid-cols-2 p-4 rounded-xl font-sora gap-4">
         <div>
-          <img src={product.product_image} alt="" className="rounded-lg" />
+          <img src={product.product_image} alt="" className="rounded-lg h-full object-cover" />
         </div>
         <div className="flex flex-col gap-4">
           <p className="text-xl font-bold">{product.product_title}</p>
@@ -16,7 +21,7 @@ function ProductInfo({ product }) {
             Price: <span>{product.price}$</span>
           </p>
           {product.availability === true ? (
-            <div className="border w-[25%] text-center p-2 rounded-3xl border-green-500 bg-green-300/35 text-zinc-100">
+            <div className="border w-[25%] text-center p-2 rounded-3xl border-green-500 bg-green-300/75 text-zinc-100">
               In Stock
             </div>
           ) : (
@@ -58,7 +63,7 @@ function ProductInfo({ product }) {
             <div className="flex items-center justify-center bg-yellow-300 px-2 text-zinc-800 py-1 rounded-xl">{product.rating}</div>
             </div>
           </div>
-          <div className="flex items-center justify-center gap-7 my-4">
+          <div className="flex items-center justify-center md:justify-start gap-7 my-4">
             <Link>
             <button className="btn">Add to Cart <MdOutlineShoppingCart /> </button>
             </Link>
@@ -67,6 +72,7 @@ function ProductInfo({ product }) {
             </Link>
           </div>
         </div>
+      </div>
       </div>
     </>
   );
