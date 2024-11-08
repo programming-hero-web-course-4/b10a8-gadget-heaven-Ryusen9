@@ -2,8 +2,7 @@ import PropTypes from "prop-types";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { Link } from "react-router-dom";
-function ProductInfo({ product }) {
-  console.log(product);
+function ProductInfo({ product, handleCart }) {
   return (
     <>
       <div className="relative h-screen font-sora mb-32">
@@ -65,7 +64,7 @@ function ProductInfo({ product }) {
           </div>
           <div className="flex items-center justify-center md:justify-start gap-7 my-4">
             <Link>
-            <button className="btn">Add to Cart <MdOutlineShoppingCart /> </button>
+            <button onClick={() => handleCart(product)} className="btn">Add to Cart <MdOutlineShoppingCart /> </button>
             </Link>
             <Link>
             <button className="btn btn-circle text-xl"> <IoMdHeartEmpty/> </button>
@@ -79,5 +78,6 @@ function ProductInfo({ product }) {
 }
 ProductInfo.propTypes = {
   product: PropTypes.object,
+  handleCart: PropTypes.func
 };
 export default ProductInfo;
