@@ -19,32 +19,49 @@ function App() {
     if (!carts.find(item => item.product_id === product.product_id)) {
       setCarts([...carts, product]);
     }
+    console.log(product)
   };
+  const sortPrice = () => {
+    const sortedCarts = [...carts].sort((a, b) => a.price - b.price); // Sorts from low to high
+    setCarts(sortedCarts);
+  };
+  console.log(carts)
+  const [wishlists, setWishlists] = useState([]);
+  const handleWishlist = (product) => {
+    if (!wishlists.find(item => item.product_id === product.product_id)) {
+      setWishlists([...wishlists, product]);
+    }
+  }
+  const handleDelete = (product) => {
+    const updatedCarts = carts.filter(item => item.product_id!== product.product_id)
+    setCarts(updatedCarts)
+    setWishlists(updatedCarts)
+  }
   const element = useRoutes([
     {
       path: "/",
-      element: <Root/>,
+      element: <Root carts={carts} wishlists={wishlists}/>,
       children: [
         {
           path: "/",
           element: (
             <>
             <Hero/>
-            <Home handleProductInfo={handleProductInfo}/>
+            <Home handleProductInfo={handleProductInfo} />
             </>
           )
         },
         {
           path: "/Dashboard",
-          element: <Dashboard handleCart={handleCart}/>,
+          element: <Dashboard handleCart={handleCart} handleWishlist={handleWishlist}/>,
           children: [
             {
               path: "Carts",
-              element: <Cart carts={carts}/>
+              element: <Cart carts={carts} handleDelete={handleDelete} sortPrice={sortPrice}/>
             },
             {
               path: "Wishlist",
-              element: <Wishlist/>
+              element: <Wishlist wishlists={wishlists} handleCart={handleCart} handleDelete={handleDelete}/>
             },
           ]
         },
@@ -54,7 +71,7 @@ function App() {
         },
         {
           path: "/Details/:productId",
-          element: <ProductInfo product={product}/>
+          element: <ProductInfo product={product} handleCart={handleCart} handleWishlist={handleWishlist}/>
         },
       ]
     },

@@ -2,8 +2,9 @@ import { Outlet } from "react-router-dom"
 import Header from "../Components/Header/Header"
 import Footer from "../Components/Footer/Footer"
 import { useState } from "react";
+import PropTypes from 'prop-types'
 
-function Root() {
+function Root({carts, wishlists}) {
     const [theme, setTheme] = useState(true);
     const handleTheme = () => {
       setTheme(!theme);
@@ -19,6 +20,8 @@ function Root() {
   return (
     <>
             <Header
+              wishlists={wishlists}
+              carts={carts}
               handleTheme={handleTheme}
               handleMenu={handleMenu}
               menu={menu}
@@ -28,6 +31,11 @@ function Root() {
             <Footer theme={theme} />
     </>
   )
+}
+
+Root.propTypes = {
+  carts: PropTypes.array,
+  wishlists: PropTypes.array
 }
 
 export default Root

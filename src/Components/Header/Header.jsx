@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
 
-const Header = ({ handleTheme, theme, handleMenu, menu }) => {
+const Header = ({ handleTheme, theme, handleMenu, menu, carts, wishlists }) => {
   const location = useLocation();
   const getBgColor = () => {
     switch (location.pathname) {
@@ -65,7 +65,7 @@ const Header = ({ handleTheme, theme, handleMenu, menu }) => {
             <IoMoonSharp className="text-xl" />
           </button>
           <div className="relative">
-            <span className="absolute -top-2 -right-1 text-sm bg-red-500 px-[3px] rounded-full">0</span>
+            <span className="absolute -top-2 -right-1 text-sm bg-red-500 px-[3px] rounded-full">{carts.length}</span>
           <Link to={"/Dashboard/Carts"}>
           <button  className="btn btn-circle btn-sm text-lg">
             <MdOutlineShoppingCart />
@@ -73,7 +73,7 @@ const Header = ({ handleTheme, theme, handleMenu, menu }) => {
           </Link>
           </div>
           <div className="relative">
-          <span className="absolute -top-2 -right-1 text-sm bg-red-500 px-[3px] rounded-full">0</span>
+          <span className="absolute -top-2 -right-1 text-sm bg-red-500 px-[3px] rounded-full">{wishlists.length}</span>
           <Link to={"/Dashboard/Wishlist"}>
           <button  className="btn btn-circle btn-sm text-lg">
             <FaRegHeart />
@@ -90,6 +90,8 @@ Header.propTypes = {
   theme: props.bool,
   handleMenu: props.func,
   menu: props.bool,
+  carts: props.array,
+  wishlists: props.array,
 };
 
 export default Header;
