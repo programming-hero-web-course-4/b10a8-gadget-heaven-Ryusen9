@@ -1,7 +1,22 @@
 import PropTypes from "prop-types";
 import { IoCloseOutline } from "react-icons/io5";
-const Wishlist = ({ wishlists, handleCart, handleDelete }) => {
+import { ToastContainer, Bounce } from "react-toastify";
+const Wishlist = ({ wishlists, handleCart, handleDelete2 }) => {
   return (
+    <>
+    <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce}
+      />
     <div className="font-sora">
       {wishlists.map((wishlist) => (
         <div className="border-2 w-[90%] mx-auto p-2" key={wishlist.id}>
@@ -28,18 +43,20 @@ const Wishlist = ({ wishlists, handleCart, handleDelete }) => {
               </div>
             </div>
             <div>
-              <button onClick={() => handleDelete(wishlist)} className="btn btn-circle btn-sm text-xl bg-rose-500 hover:bg-rose-400 text-zinc-200"> <IoCloseOutline /> </button>
+              <button onClick={() => handleDelete2(wishlist)} className="btn btn-circle btn-sm text-xl bg-rose-500 hover:bg-rose-400 text-zinc-200"> <IoCloseOutline /> </button>
             </div>
           </div>
         </div>
       ))}
     </div>
+    </>
   );
 };
 
 Wishlist.propTypes = {
   wishlists: PropTypes.array,
   handleCart: PropTypes.func,
+  handleDelete2: PropTypes.func,
 };
 
 export default Wishlist;

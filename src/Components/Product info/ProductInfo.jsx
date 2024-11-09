@@ -2,9 +2,24 @@ import PropTypes from "prop-types";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { ToastContainer, Bounce } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 function ProductInfo({ product, handleCart, handleWishlist }) {
   return (
     <>
+    <ToastContainer
+position="top-center"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+transition={Bounce}
+/>
       <div className="relative h-screen font-sora mb-32">
         <div className="bg-gradient-to-t flex flex-col text-center gap-3 pt-[90px] from-purple-500 to-purple-400 h-[40vh]">
           <p className="text-2xl md:text-4xl text-center font-bold">

@@ -15,6 +15,8 @@ const Header = ({ handleTheme, theme, handleMenu, menu, carts, wishlists }) => {
         return "bg-zinc-200";
         case "/Dashboard/Carts":
           return "bg-zinc-200";
+        case "/Dashboard/Wishlist":
+          return "bg-zinc-200";
       case "/Statistics":
         return "bg-zinc-200";
       default:
