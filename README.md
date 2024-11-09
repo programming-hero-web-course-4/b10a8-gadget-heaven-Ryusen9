@@ -1,8 +1,21 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Gadget Heaven
 
-Currently, two official plugins are available:
+Gadget Heaven is a e-commerce website that has certain functionality with advance knowledge of React.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Link
+Here is a live link of this website:
+https://gadgetheavenbyryusen.netlify.app/
+## React concepts used: 
+
+- React Router
+- Axios
+
+- useState, useEffect
+- Context API
+- Tailwind CSS
+
+## Key Features
+
+This website comes with a bunch of features. It has features like adding to cart, wishlist functionality, deletation and price sorting with many more to explore. Feel free to dive in!
