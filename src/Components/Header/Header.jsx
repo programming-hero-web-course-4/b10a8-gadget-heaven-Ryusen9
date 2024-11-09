@@ -19,6 +19,8 @@ const Header = ({ handleTheme, theme, handleMenu, menu, carts, wishlists }) => {
           return "bg-zinc-200";
       case "/Statistics":
         return "bg-zinc-200";
+        case "/Challenge":
+        return "bg-zinc-200";
       default:
         if (location.pathname.startsWith("/Details/")) {
           return "bg-zinc-200";

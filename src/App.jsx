@@ -9,6 +9,7 @@ import Hero from './Components/Hero/Hero'
 import Cart from './Components/Cart/Cart'
 import Wishlist from './Wishlist/Wishlist'
 import { toast } from 'react-toastify';
+import Challenge from "./Challenge/Challenge";
 
 function App() {
   const [product, setProduct] = useState([])
@@ -125,9 +126,13 @@ function App() {
           element: <Statistics/>
         },
         {
+          path: "/Challenge",
+          element: <Challenge/>
+        },
+        {
           path: "/Details/:productId",
           element: <ProductInfo product={product} handleCart={handleCart} handleWishlist={handleWishlist}/>
-        },
+        }
       ]
     },
   ]);
