@@ -21,7 +21,7 @@ theme="light"
 transition={Bounce}
 />
       <div className="relative h-screen font-sora mb-32">
-        <div className="bg-gradient-to-t flex flex-col text-center gap-3 pt-[90px] from-purple-500 to-purple-400 h-[40vh]">
+        <div className="bg-gradient-to-t flex flex-col text-center gap-3 pt-[120px] from-purple-500 to-purple-400 h-[40vh]">
           <p className="text-2xl md:text-4xl text-center font-bold">
             Product Details
           </p>
@@ -32,11 +32,11 @@ transition={Bounce}
           </p>
         </div>
         <div className="absolute top-[70%] md:top-[60%] backdrop-blur-md left-1/2 translate-x-[-50%] translate-y-[-50%] border-2 w-[90%] mx-auto mb-5 grid grid-cols-1 md:grid-cols-2 p-4 rounded-xl font-sora gap-4">
-          <div>
+          <div className="lg:h-[45vh] flex items-center justify-center">
             <img
               src={product.product_image}
               alt=""
-              className="rounded-lg h-full object-cover"
+              className="rounded-lg object-cover h-[15vh] w-full lg:h-full"
             />
           </div>
           <div className="flex flex-col gap-4">
